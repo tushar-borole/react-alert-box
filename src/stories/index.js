@@ -1,8 +1,10 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { linkTo } from '@storybook/addon-links';
 
-import Modal from '../Modal';
+import { AlertProvider }from '../index';
+import App from '../App'
 
-storiesOf('Welcome', module).add('to Storybook', () => <Modal/>);
+storiesOf('Welcome', module).add('Modal', () => <AlertProvider>
+    <App/>
+</AlertProvider>);
